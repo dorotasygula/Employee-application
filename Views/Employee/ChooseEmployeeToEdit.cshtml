@@ -1,0 +1,20 @@
+﻿@model WebApplication1.ViewModels.EmployeeViewModel
+
+@{
+    ViewBag.Title = "EditEmployee";
+}
+
+<h2>DeleteEmployee</h2>
+
+<form action="/Employee/EditEmployee" method="post">
+
+
+    @Html.DropDownListFor(
+     model => model.EmployeeIdToEdit, 
+     new SelectList(Model.AllEmployeesFromDatabase, "EmployeeId", "EmployeeId"),
+          new { @class = "form-control" }
+)
+
+    <input type="submit" value="Submit" />
+
+</form>

@@ -1,0 +1,43 @@
+﻿@model WebApplication1.Models.Employee 
+
+
+@{
+    ViewBag.Title = "AddNewEmployee";
+}
+<style>
+
+.SmallInput
+{
+    width:100px; 
+}
+</style>
+
+<h2>Add a new employee: </h2>
+
+<form action="/Employee/AddNewEmployee" method="post">
+
+
+    <div>
+        @Html.LabelFor(model => model.EmployeeId, "Id", new { @class = "SmallInput" })
+        @Html.TextBoxFor(model => model.EmployeeId, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Name, new { @class = "SmallInput" })
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(model => model.City, new { @class = "SmallInput" })
+        @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Gender, new { @class = "SmallInput" })
+        @Html.EnumDropDownListFor(model => model.Gender,  new { @class = "form-control" })
+    </div>
+    </br>
+    <input type="submit" value="Submit" />
+
+</form>
+
+
+ 
+

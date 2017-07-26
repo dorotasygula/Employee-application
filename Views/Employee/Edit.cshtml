@@ -1,0 +1,30 @@
+﻿@model WebApplication1.Models.Employee
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(x => x.Name)
+        @Html.EditorFor(x => x.Name)
+  
+       
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.EmployeeId)
+        @Html.EditorFor(x => x.EmployeeId)
+   
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.City)
+        @Html.EditorFor(x => x.City)
+
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Gender)
+        @Html.EditorFor(x => x.Gender)
+    </div>
+
+
+    <button type = "submit"> Save </button>
+}

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebApplication1.Models.Employee>
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+<h2>Details: <br />
+    
+
+ @foreach (var d in Model)
+ {
+     <h3>
+         <ul>
+            <li>@d.EmployeeId</li> 
+             <br />
+           <li>@d.Name</li>  
+             <br />
+            <li>@d.City</li>
+             <br />
+            <li>@d.Gender</li> 
+             <br />
+
+             @*@Html.ActionLink("Employee", "Edit", new { id = @d.EmployeeId});*@ 
+            @Html.ActionLink("Edit this employee", "Edit", "Employee", new {id = @d.EmployeeId}, null)
+         
+         </ul>
+       
+     </h3>
+       }
+
+     <h2>
+
+    @Html.ActionLink("Add", // <-- Link text
+
+                 "AddNewEmployee", // <-- Action Method Name
+
+                 "Employee")
+
+
+
+
+       
+
+
+
+    </h2>
+
